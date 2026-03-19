@@ -1,25 +1,29 @@
 public class Billetera {
-double balanceTotal;
-String = "USD";
-String titular;
-boolean cuentaActiva = true;
-public Billetera(String titular, double saldoInicial) {
-this.titular = titular;
-this.balanceTotal = saldoInicial;
-}
+    double balanceTotal;         
+    String moneda = "USD";      
+    String titular;
+    boolean cuentaActiva = true; 
 
-public void transferir(double monto) {
-
-    if(monto>balanceTotal){
-        System.out.println("Fondos insuficientes");
-        return balanceTotal;
+    public Billetera(String titular, double saldoInicial) {
+        this.titular = titular;
+        this.balanceTotal = saldoInicial; 
     }
-balanceTotal = balanceTotal - (monto*1.05);
-System.out.println("Transferencia exitosa de:$ " + monto);
-}
 
+    public void transferir(double monto) {
+        
+        if (monto > balanceTotal) {
+            System.out.println("Fondos insuficientes");
+            return;
+        }
 
-public void mostrarSaldo() {
-System.out.println("Saldo de " + titular + ": $" + balanceTotal);
-}
+       
+        balanceTotal = balanceTotal - (monto * 1.05);
+
+        // Integrante 3: mensaje de éxito
+        System.out.println("Transferencia exitosa de: $" + monto);
+    }
+
+    public void mostrarSaldo() {
+        System.out.println("Saldo de " + titular + ": $" + balanceTotal);
+    }
 }
