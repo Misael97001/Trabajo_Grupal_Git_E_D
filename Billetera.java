@@ -1,6 +1,8 @@
 public class Billetera {
 double balanceTotal;
+String = "USD";
 String titular;
+boolean cuentaActiva = true;
 public Billetera(String titular, double saldoInicial) {
 this.titular = titular;
 this.balanceTotal = saldoInicial;
@@ -11,7 +13,7 @@ public void transferir(double monto) {
         System.out.println("Fondos insuficientes");
         return balanceTotal;
     }
-balanceTotal = balanceTotal - monto;
+balanceTotal = balanceTotal - (monto*1.05);
 }
 
 
