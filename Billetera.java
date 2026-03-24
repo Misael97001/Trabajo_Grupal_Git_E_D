@@ -10,16 +10,12 @@ public class Billetera {
     }
 
     public void transferir(double monto) {
-        
         if (monto > balanceTotal) {
             System.out.println("Fondos insuficientes");
             return;
         }
 
-       
         balanceTotal = balanceTotal - (monto * 1.05);
-
-      
         System.out.println("Transferencia exitosa de: $" + monto);
     }
 

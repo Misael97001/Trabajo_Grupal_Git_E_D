@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 public static void main(String[] args) {
 Billetera miBilletera = new Billetera("Juan Perez", 100.0);
@@ -22,6 +24,4 @@ Billetera billetera2 = new Billetera("Maria Lopez", 500.0);
 billetera2.mostrarSaldo();
 
 }
-
-
 }
